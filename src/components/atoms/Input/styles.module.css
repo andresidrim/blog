@@ -1,0 +1,41 @@
+.stories {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.input {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: start;
+    text-align: start;
+    text-wrap: nowrap;
+    font-size: 20px;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: #747474bf;
+    color: white;
+
+    &::placeholder {
+        color: white;
+        opacity: 0.6;
+        font-style: italic;
+    }
+
+    &::-ms-input-placeholder {
+        color: white;
+        opacity: 0.6;
+        font-style: italic;
+    }
+}
+
+/*#319B99*/
+/*#267372*/
+/*#1A4C4B*/
+/*#0D2625*/
+/*#000000*/
