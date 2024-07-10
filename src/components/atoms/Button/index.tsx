@@ -6,7 +6,7 @@ import styles from './styles.module.css'
 
 const Button = forwardRef(
     (
-        { asChild, children, className, ...props }: ButtonProps,
+        { asChild, children, google = false, className, ...props }: ButtonProps,
         ref: Ref<HTMLButtonElement>
     ) => {
         const Component = asChild ? Slot : 'button'
@@ -14,7 +14,11 @@ const Button = forwardRef(
         return (
             <Component
                 ref={ref}
-                className={clsx(styles.button, className)}
+                className={clsx(
+                    styles.button,
+                    google && styles.login,
+                    className
+                )}
                 {...props}
             >
                 {children}

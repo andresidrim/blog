@@ -29,3 +29,15 @@
         background-color: #1a4c4b;
     }
 }
+
+.login {
+    background-color: #ea4335;
+
+    &:hover {
+        background-color: #d23c2f;
+    }
+
+    &:active {
+        background-color: #bb352a;
+    }
+}

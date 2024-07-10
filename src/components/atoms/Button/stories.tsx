@@ -39,3 +39,10 @@ export const AsChild: Story = {
         ),
     },
 }
+
+export const SignIn: Story = {
+    args: {
+        children: 'Sign In',
+        google: true,
+    },
+}
