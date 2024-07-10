@@ -11,13 +11,9 @@ const TextArea = forwardRef(
         return (
             <textarea
                 ref={ref}
-                name=''
-                id=''
                 className={clsx(styles.textarea, className)}
                 {...props}
-            >
-                {children}
-            </textarea>
+            />
         )
     }
 )
