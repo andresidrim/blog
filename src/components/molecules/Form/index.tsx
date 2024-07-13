@@ -23,6 +23,8 @@ const Form = ({ variant = 'signin', className, ...props }: FormProps) => {
         }).finally(() => setLoading(false))
     }
 
+    // console.log(getToken())
+
     return (
         <form
             onSubmit={handleSubmit}
