@@ -2,5 +2,5 @@ import { ButtonHTMLAttributes } from 'react'
 
 export type ButtonProps = {
     asChild?: boolean
-    google?: boolean
+    loading?: boolean
 } & ButtonHTMLAttributes<HTMLButtonElement>

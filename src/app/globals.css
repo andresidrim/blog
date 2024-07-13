@@ -78,7 +78,8 @@
 
 *,
 *::after,
-*::before {
+*::before,
+.sb-show-main.sb-main-padded {
     box-sizing: border-box;
     padding: 0;
     margin: 0;

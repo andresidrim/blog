@@ -7,15 +7,14 @@ const handler = NextAuth({
         Credentials({
             name: 'Credentials',
             credentials: {
-                email: { label: 'Email', type: 'text' },
-                username: { label: 'Username', type: 'text' },
+                login: { label: 'Login', type: 'text' },
                 password: { label: 'Password', type: 'password' },
             },
             authorize: async (credentials) => {
                 const user = users.find(
                     (user) =>
-                        (user.email === credentials?.email ||
-                            user.username === credentials?.username) &&
+                        (user.email === credentials?.login ||
+                            user.username === credentials?.login) &&
                         user.password === credentials.password
                 )
 

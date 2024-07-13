@@ -20,6 +20,9 @@
     font-size: 16px;
     transition: background-color 150ms ease-in-out;
     cursor: pointer;
+    -webkit-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 15px -10px rgba(0, 0, 0, 0.3);
 
     &:hover {
         background-color: #267372;
@@ -30,14 +33,22 @@
     }
 }
 
-.login {
-    background-color: #ea4335;
+.loading {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
 
-    &:hover {
-        background-color: #d23c2f;
+.loading-animation {
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotateZ(0deg);
     }
 
-    &:active {
-        background-color: #bb352a;
+    to {
+        transform: rotateZ(359deg);
     }
 }

@@ -3,10 +3,17 @@ import { Slot } from '@radix-ui/react-slot'
 import { forwardRef, Ref } from 'react'
 import { ButtonProps } from './types'
 import styles from './styles.module.css'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 
 const Button = forwardRef(
     (
-        { asChild, children, google = false, className, ...props }: ButtonProps,
+        {
+            asChild,
+            children,
+            loading = false,
+            className,
+            ...props
+        }: ButtonProps,
         ref: Ref<HTMLButtonElement>
     ) => {
         const Component = asChild ? Slot : 'button'
@@ -16,12 +23,19 @@ const Button = forwardRef(
                 ref={ref}
                 className={clsx(
                     styles.button,
-                    google && styles.login,
+                    loading && styles.loading,
                     className
                 )}
                 {...props}
             >
-                {children}
+                {loading ? (
+                    <AiOutlineLoading3Quarters
+                        size={26}
+                        className={styles['loading-animation']}
+                    />
+                ) : (
+                    children
+                )}
             </Component>
         )
     }

@@ -40,9 +40,9 @@ export const AsChild: Story = {
     },
 }
 
-export const SignIn: Story = {
+export const Loading: Story = {
     args: {
-        children: 'Sign In',
-        google: true,
+        children: 'Loading',
+        loading: true,
     },
 }

@@ -1,10 +1,10 @@
 import styles from './page.module.css'
-import Teste from '@/components/Teste'
+import { Form } from '@/components/molecules'
 
 export default function Home() {
     return (
         <main className={styles.main}>
-            <Teste />
+            <Form />
         </main>
     )
 }

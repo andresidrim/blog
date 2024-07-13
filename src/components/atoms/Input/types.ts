@@ -1,5 +1,3 @@
 import { InputHTMLAttributes } from 'react'
 
-export type InputProps = {
-    children: string
-} & InputHTMLAttributes<HTMLInputElement>
+export type InputProps = InputHTMLAttributes<HTMLInputElement>
