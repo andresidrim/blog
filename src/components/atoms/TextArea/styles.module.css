@@ -10,8 +10,8 @@
     width: 45ch;
     height: 8em;
     align-items: center;
-    justify-content: start;
-    text-align: start;
+    justify-content: flex-start;
+    text-align: flex-start;
     font-size: 20px;
     padding-block: 0.5rem;
     padding-inline: 1rem;

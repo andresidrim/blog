@@ -10,8 +10,8 @@
     width: 100%;
     height: fit-content;
     align-items: center;
-    justify-content: start;
-    text-align: start;
+    justify-content: flex-start;
+    text-align: flex-start;
     text-wrap: nowrap;
     font-size: 20px;
     padding-block: 0.75rem;

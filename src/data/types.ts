@@ -1,23 +1,21 @@
-import { ReactNode } from 'react'
-
 export type User = {
-    id: string
+    id: number
+    createdAt: Date
     name: string
     email: string
     username: string
+    updatedAt: Date
     password: string
-    posts?: Post[]
 }
 
 export type Post = {
     id: number
-    title: string
-    description?: string
-    content: ReactNode
-    upvotes: number
     createdAt: Date
-
-    userPostId: number
-
+    updatedAt: Date
+    title: string
+    description: string
+    category: string[]
     userId: number
 }
+
+export type Category = 'Art' | 'Games' | 'Tech' | 'Software' | 'AI' | 'Coding'

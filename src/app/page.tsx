@@ -1,11 +1,9 @@
-import styles from './page.module.css'
-import { Form } from '@/components/molecules'
+import { Hero } from '@/components/templates'
 
 export default function Home() {
     return (
-        <main className={styles.main}>
-            <Form />
+        <main>
+            <Hero />
         </main>
     )
 }
-1

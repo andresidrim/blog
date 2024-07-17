@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/react'
 import Form from '.'
 import { FormProps } from './types'
 import styles from './styles.module.css'
-import { SessionProvider } from 'next-auth/react'
 
 export default {
     title: 'Components/Molecules/Form',
@@ -17,8 +16,18 @@ export default {
     ],
 
     tags: ['autodocs'],
-} as Meta<FormProps>
+} as Meta<FormProps & { variant: 'signin' | 'signup' }>
 
-type Story = StoryObj<FormProps>
+type Story = StoryObj<FormProps & { variant: 'signin' | 'signup' }>
 
-export const Default: Story = {}
+export const SignIn: Story = {
+    args: {
+        variant: 'signin',
+    },
+}
+
+export const SignUp: Story = {
+    args: {
+        variant: 'signup',
+    },
+}
